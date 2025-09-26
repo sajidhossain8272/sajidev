@@ -109,7 +109,7 @@ export default function AboutSection() {
                 {/* media slot */}
                 <div className='relative w-full h-full rounded-[inherit] overflow-hidden'>
                   <AvatarImage
-                    src='https://media.licdn.com/dms/image/v2/D5603AQEbrc9P2osCTA/profile-displayphoto-shrink_800_800/B56ZOn4bFkGkAc-/0/1733688408020?e=1757548800&v=beta&t=7k-ARUgVF7mQEoZfvrUvx9ErgrzU490v8ngn49FDVkQ'
+                    src='https://avatars.githubusercontent.com/u/85248510?v=4'
                     alt='Sajid Hossain'
                     isMobile={isMobile}
                     priority={false}
