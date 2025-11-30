@@ -50,8 +50,8 @@ const projects = [
     description:
       "A comprehensive crypto airdrop discovery platform with AI-powered content automation, real-time tracking, automated social media publishing, and advanced Web3 integrations.",
     stack: ["Web3", "REST API", "Gemini AI", "Automation", "MongoDB", "n8n"],
-    liveUrl: "https://airdropinfinity.com",
-    image: "https://airdropinfinity.com/og-image.png",
+    liveUrl: "https://airdrop-infinity.vercel.app",
+    image: "https://airdrop-infinity.vercel.app/og-image.png",
     icon: Shield,
     gradient: "from-purple-500 to-pink-500",
     period: "Nov 2024 – July 2025",
