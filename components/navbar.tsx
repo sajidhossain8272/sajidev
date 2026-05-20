@@ -47,8 +47,8 @@ export default function Navbar() {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Sajid_Hossain_Resume_2025.pdf";
-    link.download = "Sajid_Hossain_Resume_2025.pdf";
+    link.href = "/Sajid-Hossain-Resume.pdf";
+    link.download = "Sajid-Hossain-Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

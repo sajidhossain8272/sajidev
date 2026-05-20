@@ -10,8 +10,8 @@ export default function ResumeDownload() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Sajid_Hossain_Resume_2025.pdf"; // ✅ Public folder path
-    link.download = "Sajid_Hossain_Resume_2025.pdf"; // ✅ File name for saving
+    link.href = "/Sajid-Hossain-Resume.pdf"; // ✅ Public folder path
+    link.download = "Sajid-Hossain-Resume.pdf"; // ✅ File name for saving
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
