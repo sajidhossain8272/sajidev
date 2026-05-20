@@ -15,23 +15,25 @@ const experiences = [
   {
     title: "Software Developer",
     company: "Panorama Management Advisory Services",
+    companyUrl: "https://panoramamas.com/",
     type: "Hybrid",
     period: "Oct 2024 – Mar 2026",
     website: "https://panoramamas.com",
     gradient: "from-blue-500 to-purple-500",
     achievements: [
       "Built responsive, high-performing front-end features from the ground up using React.js, Next.js, and Tailwind CSS",
-      "Architected and maintained the Panorama Assessment Tool, focusing heavily on smooth user workflows and overall product usability",
+      "Architected and maintained the [[Panorama Assessment Tool|https://pansms.panoramamas.com/]], focusing heavily on smooth user workflows and overall product usability",
       "Collaborated directly with backend developers to define REST APIs, support server-side integrations, and actively monitor DevOps and backend deployment pipelines",
       "Authored Product Requirements Documents (PRDs) and planned continuous development cycles",
       "Co-developed AI-driven auditing tools capable of generating comprehensive, actionable company assessments and instant reports in just 1–2 hours",
-      "Designed and deployed automated internal and external workflows using n8n to successfully scale the operations of the Assessment Tool",
+      "Designed and deployed automated internal and external workflows using n8n to successfully scale the operations of the [[Panorama Assessment Tool|https://pansms.panoramamas.com/]]",
       "Wrote robust test cases and managed the feature release timeline to ensure stable and reliable deployments",
     ],
   },
   {
     title: "Software Associate",
     company: "Panorama Management Advisory Services",
+    companyUrl: "https://panoramamas.com/",
     type: "Hybrid",
     period: "Mar 2024 – Oct 2024",
     website: "https://panoramamas.com",
@@ -156,7 +158,14 @@ export default function ExperienceSection() {
                     </motion.h3>
                     <div className='flex items-center gap-2 sm:gap-3 text-white/80 text-sm sm:text-base'>
                       <Building className='h-4 w-4 sm:h-5 sm:w-5' />
-                      <span className='font-medium'>{exp.company}</span>
+                      <a
+                        href={exp.companyUrl}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='font-medium hover:text-blue-300 transition-colors duration-200 underline underline-offset-2 decoration-white/30 hover:decoration-blue-300'
+                      >
+                        {exp.company}
+                      </a>
                       <span className='text-white/40'>•</span>
                       <span className='text-white/60'>{exp.type}</span>
                     </div>
@@ -215,7 +224,20 @@ export default function ExperienceSection() {
                         }
                       />
                       <span className='text-white/90 leading-relaxed group-hover/achievement:text-white transition-colors duration-200 text-xs sm:text-base'>
-                        {achievement}
+                        {achievement.split(/\[\[([^|\]]+)\|([^\]]+)\]\]/).map((part, i) =>
+                          i % 3 === 1 ? (
+                            <a
+                              key={i}
+                              href={achievement.split(/\[\[([^|\]]+)\|([^\]]+)\]\]/)[i + 1]}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='text-blue-300 hover:text-blue-200 underline underline-offset-2 decoration-blue-400/50 hover:decoration-blue-300 transition-colors duration-200'
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              {part}
+                            </a>
+                          ) : i % 3 === 2 ? null : part
+                        )}
                       </span>
                     </motion.div>
                   ))}
@@ -225,82 +247,7 @@ export default function ExperienceSection() {
           ))}
         </div>
 
-        {/* Career Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className='mt-10 sm:mt-20'
-        >
-          <motion.div
-            className={`bg-gradient-to-br from-white/10 to-white/5 border border-white/20 ${
-              isMobile
-                ? "p-6 rounded-2xl shadow-md"
-                : "p-12 rounded-3xl shadow-2xl"
-            } backdrop-blur-md sm:backdrop-blur-xl`}
-          >
-            <div className='grid grid-cols-3 sm:grid-cols-3 gap-6 sm:gap-8 text-center'>
-              {[
-                {
-                  icon: TrendingUp,
-                  label: "Years Experience",
-                  value: "3+",
-                  gradient: "from-blue-500 to-purple-500",
-                },
-                {
-                  icon: Award,
-                  label: "Projects Completed",
-                  value: "32+",
-                  gradient: "from-emerald-500 to-teal-500",
-                },
-                {
-                  icon: Users,
-                  label: "Client Satisfaction",
-                  value: "100%",
-                  gradient: "from-purple-500 to-pink-500",
-                },
-              ].map((stat, index) => {
-                const IconComponent = stat.icon;
-                return (
-                  <motion.div
-                    key={stat.label}
-                    whileHover={isMobile ? {} : { scale: 1.05, y: -3 }}
-                    transition={{ duration: 0.2 }}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className='group'
-                  >
-                    <motion.div
-                      className={`flex items-center justify-center w-11 h-11 sm:w-16 sm:h-16 bg-gradient-to-r ${stat.gradient} rounded-xl sm:rounded-2xl mx-auto mb-3 sm:mb-4 shadow`}
-                      whileHover={isMobile ? {} : { rotate: 10, scale: 1.09 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <IconComponent className='h-6 w-6 sm:h-8 sm:w-8 text-white' />
-                    </motion.div>
-                    <motion.h3
-                      className='text-xl sm:text-3xl font-bold text-white mb-1 sm:mb-2'
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 200,
-                        delay: index * 0.1 + 0.25,
-                      }}
-                      viewport={{ once: true }}
-                    >
-                      {stat.value}
-                    </motion.h3>
-                    <p className='text-white/70 font-medium text-xs sm:text-base'>
-                      {stat.label}
-                    </p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-        </motion.div>
+
       </div>
     </section>
   );

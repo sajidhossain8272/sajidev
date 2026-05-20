@@ -9,6 +9,7 @@ import {
   MessageSquare,
   Zap,
   Users,
+  Sparkles,
 } from "lucide-react";
 import { useState } from "react";
 import CalendlyModal from "./calendly-modal";
@@ -246,7 +247,9 @@ export default function ConsultationSection() {
                   : undefined
               }
             >
-              <span className={isMobile ? "text-4xl" : "text-6xl"}>🚀</span>
+              <div className={`inline-flex items-center justify-center ${isMobile ? "w-14 h-14" : "w-20 h-20"} bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl sm:rounded-3xl shadow-2xl`}>
+                <Sparkles className={`${isMobile ? "h-8 w-8" : "h-10 w-10"} text-white`} />
+              </div>
             </motion.div>
 
             {/* Title */}
