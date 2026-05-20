@@ -251,7 +251,7 @@ export default function ExperienceSection() {
                 {
                   icon: Award,
                   label: "Projects Completed",
-                  value: "29+",
+                  value: "32+",
                   gradient: "from-emerald-500 to-teal-500",
                 },
                 {

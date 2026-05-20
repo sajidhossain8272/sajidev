@@ -10,7 +10,7 @@ const stats = [
   {
     icon: Code,
     label: "Projects",
-    value: "29+",
+    value: "32+",
     color: "from-blue-400 to-cyan-400",
   },
   {
