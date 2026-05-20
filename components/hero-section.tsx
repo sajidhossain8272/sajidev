@@ -189,20 +189,7 @@ transition-all duration-300 '
             />
           )}
 
-          {/* Status Badge, Name, Tagline, Bio */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.25 }}
-            className='mb-7 sm:mb-8'
-          >
-            <span
-              className='inline-block px-5 py-2 sm:px-6 sm:py-2.5 bg-gradient-to-r from-blue-500/25 to-purple-500/25 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm sm:text-base font-medium shadow'
-              tabIndex={0}
-            >
-              ✨ Let’s make your project shine, new or existing
-            </span>
-          </motion.div>
+
 
           <motion.h1
             className='text-4xl sm:text-5xl md:text-5xl font-extrabold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-3 leading-tight drop-shadow'
