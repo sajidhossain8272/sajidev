@@ -8,16 +8,42 @@ import {
   Zap,
   Shield,
   Sparkles,
+  ShoppingBag,
+  Terminal,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const projects = [
   {
+    title: "QUULIX",
+    tag: "E-commerce Solution",
+    description:
+      "Built a responsive e-commerce solution with product, cart, and checkout workflows. Improved conversion-focused UX using Next.js and SEO-friendly storefront design.",
+    stack: ["Next.js", "React.js", "Tailwind CSS", "SEO", "UX Design"],
+    liveUrl: "https://quulix.vercel.app/",
+    image: "https://quulix.vercel.app/og-image.png",
+    icon: ShoppingBag,
+    gradient: "from-blue-500 to-purple-500",
+    period: "Apr 2026 – Present",
+  },
+  {
+    title: "Plzwork",
+    tag: "Developer & Designer Suite",
+    description:
+      "Built Plzwork as a collection of free and freemium tools for developers and designers. Created browser tools and CLI-friendly workflows with React and TypeScript.",
+    stack: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "Web APIs"],
+    liveUrl: "https://plzwork-xyz.vercel.app/",
+    image: "https://plzwork-xyz.vercel.app/og-image.png",
+    icon: Terminal,
+    gradient: "from-emerald-500 to-teal-500",
+    period: "Mar 2025 – Present",
+  },
+  {
     title: "GrafiXr",
     tag: "Digital Agency Portfolio",
     description:
-      "A sophisticated portfolio platform designed for creative agencies featuring custom admin panel, dynamic project management, and advanced SEO optimization with modern glassmorphism design.",
+      "Built a responsive agency website with Next.js, MongoDB, Cloudinary, and SEO optimization. Developed a dynamic admin panel for content and project management.",
     stack: [
       "React.js",
       "Next.js",
@@ -29,32 +55,8 @@ const projects = [
     liveUrl: "https://grafixr.com",
     image: "https://grafixr.com/og-image.png",
     icon: Sparkles,
-    gradient: "from-blue-500 to-purple-500",
-    period: "Mar 2025 – Aug 2025",
-  },
-  {
-    title: "Quick Convert",
-    tag: "Image Conversion Tool",
-    description:
-      "A secure, privacy-first in-browser image conversion utility built with modern React architecture, focusing on performance, accessibility, and user experience with zero server dependency.",
-    stack: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "Web APIs"],
-    liveUrl: "https://quick-convert-img.vercel.app/",
-    image: "https://quick-convert-img.vercel.app/og-image.png",
-    icon: Zap,
-    gradient: "from-emerald-500 to-teal-500",
-    period: "Mar 2025",
-  },
-  {
-    title: "Airdrop Infinity",
-    tag: "Web3 Airdrop Tracker",
-    description:
-      "A comprehensive crypto airdrop discovery platform with AI-powered content automation, real-time tracking, automated social media publishing, and advanced Web3 integrations.",
-    stack: ["Web3", "REST API", "Gemini AI", "Automation", "MongoDB", "n8n"],
-    liveUrl: "https://airdrop-infinity.vercel.app",
-    image: "https://airdrop-infinity.vercel.app/og-image.png",
-    icon: Shield,
     gradient: "from-purple-500 to-pink-500",
-    period: "Nov 2024 – July 2025",
+    period: "Mar 2025 – Aug 2025",
   },
 ];
 
@@ -139,7 +141,7 @@ export default function ProjectsSection() {
                     <motion.img
                       src={project.image}
                       alt={project.title}
-                      className='w-full h-full object-cover'
+                      className='w-full h-full object-contain p-2 sm:p-3 bg-black/40'
                       loading='lazy'
                       style={
                         isMobile
@@ -181,7 +183,7 @@ export default function ProjectsSection() {
                         <Button
                           size='default'
                           className='bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30'
-                          onClick={() => window.open(project.liveUrl, "_blank")}
+                          onClick={() => { window.open(project.liveUrl, "_blank"); }}
                         >
                           <ExternalLink className='h-5 w-5 mr-2' />
                           View Live
@@ -229,7 +231,7 @@ export default function ProjectsSection() {
                     >
                       <Button
                         className={`w-full bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white font-semibold py-3 rounded-xl shadow-xl border-0`}
-                        onClick={() => window.open(project.liveUrl, "_blank")}
+                        onClick={() => { window.open(project.liveUrl, "_blank"); }}
                       >
                         <ExternalLink className='h-4 w-4 mr-2' />
                         Visit Live Site

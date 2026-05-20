@@ -22,7 +22,7 @@ const stats = [
   {
     icon: Award,
     label: "Years",
-    value: "2+",
+    value: "3+",
     color: "from-emerald-400 to-teal-400",
   },
   {
@@ -129,16 +129,16 @@ export default function AboutSection() {
             <div className='backdrop-blur-xl bg-white/[0.06] border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl'>
               <p className='text-base sm:text-lg text-white/85 leading-relaxed mb-4 sm:mb-6'>
                 Software Developer with{" "}
-                <strong className='text-white'>2+ years</strong> delivering
-                responsive, high-performance web apps using{" "}
+                <strong className='text-white'>3+ years</strong> of experience delivering
+                responsive, SEO-friendly web applications using{" "}
                 <strong className='text-blue-300'>React.js</strong>,{" "}
                 <strong className='text-purple-300'>Next.js</strong>,{" "}
                 <strong className='text-cyan-300'>TypeScript</strong>, and{" "}
                 <strong className='text-emerald-300'>Tailwind CSS</strong>.
               </p>
               <p className='text-base sm:text-lg text-white/80 leading-relaxed'>
-                Expert in APIs, performance, and UX. Led scalable front-end
-                builds in agile, remote-first teams.
+                Proven ability to improve performance, accessibility, and user experience while
+                collaborating with cross-functional teams.
               </p>
             </div>
 
@@ -162,7 +162,7 @@ export default function AboutSection() {
                 {
                   icon: Clock,
                   label: "Experience",
-                  value: "2+ years",
+                  value: "3+ years",
                   color: "from-purple-500/10 to-pink-500/10",
                   iconColor: "text-purple-400",
                 },
