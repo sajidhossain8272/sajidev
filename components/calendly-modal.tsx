@@ -89,7 +89,7 @@ export default function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
               <div
                 ref={calendlyContainerRef}
                 className='calendly-inline-widget w-full h-full'
-                data-url='https://calendly.com/sajidhossain8272/30min'
+                data-url='https://calendly.com/sajidhossain8272/broke-innovation-mentor'
                 style={{ minWidth: "320px", height: "100%" }}
               />
             </div>

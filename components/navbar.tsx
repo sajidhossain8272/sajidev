@@ -123,7 +123,7 @@ export default function Navbar() {
               className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0"
             >
               <a
-                href="https://calendly.com/sajidhossain8272/30min"
+                href="https://calendly.com/sajidhossain8272/broke-innovation-mentor"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -172,7 +172,7 @@ export default function Navbar() {
               className="mt-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0"
             >
               <a
-                href="https://calendly.com/sajidhossain8272/30min"
+                href="https://calendly.com/sajidhossain8272/broke-innovation-mentor"
                 target="_blank"
                 rel="noopener noreferrer"
               >

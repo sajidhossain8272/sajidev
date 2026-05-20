@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { MapPin, Globe, Clock, Award, Users, Code, Target } from "lucide-react";
+import { MapPin, Globe, Clock, Award, Users, Code, Target, Github } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const stats = [
@@ -71,7 +71,7 @@ export default function AboutSection() {
             initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
-            className='flex justify-center'
+            className='flex flex-col items-center gap-5 sm:gap-6 justify-center'
           >
             <div className='relative'>
               {/* soft neon ring */}
@@ -117,6 +117,19 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
+
+            {/* Explore My GitHub Button */}
+            <motion.a
+              href="https://github.com/sajidhossain8272"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white/95 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 shadow-md backdrop-blur-md transition-all duration-300 select-none cursor-pointer"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Github className="h-4 w-4 text-white/80" />
+              <span>Explore My GitHub</span>
+            </motion.a>
           </motion.div>
 
           {/* Bio + Info */}
