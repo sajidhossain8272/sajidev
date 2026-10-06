@@ -93,6 +93,31 @@ export default function SiteHeader() {
               {item.label}
             </a>
           ))}
+
+          <div className="nav-menu-actions">
+            <a
+              href="https://www.fiverr.com/s/2ppGxAQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-fiverr"
+              onClick={() => setMenuOpen(false)}
+            >
+              Fiverr
+              <span>↗</span>
+            </a>
+
+            <button
+              type="button"
+              className="nav-cta"
+              onClick={() => {
+                setMenuOpen(false);
+                openBooking();
+              }}
+            >
+              Let&apos;s talk
+              <span>↗</span>
+            </button>
+          </div>
         </div>
 
         <div className="nav-actions">
