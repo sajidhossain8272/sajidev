@@ -367,6 +367,10 @@ h2 span {
   display: none;
 }
 
+.nav-links-fiverr {
+  display: none;
+}
+
 .mobile-menu-button {
   display: none;
   width: 40px;
@@ -1352,7 +1356,10 @@ h2 span {
     border-top: 1px solid var(--border);
   }
 
-  .nav-menu-actions .nav-fiverr,
+  .nav-links-fiverr {
+    display: block;
+  }
+
   .nav-menu-actions .nav-cta {
     justify-content: center;
     width: 100%;
@@ -1458,6 +1465,15 @@ h2 span {
   .footer-big-head {
     grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .footer-col-links a,
+  .footer-col-links span {
+    overflow-wrap: anywhere;
+  }
+
+  .footer-col-cta .button {
+    width: 100%;
   }
 
   .footer-giant {

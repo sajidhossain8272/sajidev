@@ -94,18 +94,17 @@ export default function SiteHeader() {
             </a>
           ))}
 
-          <div className="nav-menu-actions">
-            <a
-              href="https://www.fiverr.com/s/2ppGxAQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-fiverr"
-              onClick={() => setMenuOpen(false)}
-            >
-              Fiverr
-              <span>↗</span>
-            </a>
+          <a
+            href="https://www.fiverr.com/s/2ppGxAQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-links-fiverr"
+            onClick={() => setMenuOpen(false)}
+          >
+            Fiverr
+          </a>
 
+          <div className="nav-menu-actions">
             <button
               type="button"
               className="nav-cta"
