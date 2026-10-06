@@ -1,9 +1,10 @@
 "use client";
 
-import { useBooking } from "./calendly-context";
+import { useState } from "react";
+import InquiryModal from "./inquiry-modal";
 
 export default function FinalCtaSection() {
-  const { openBooking } = useBooking();
+  const [inquiryOpen, setInquiryOpen] = useState(false);
 
   return (
     <section className="final-cta section container" id="contact">
@@ -25,15 +26,20 @@ export default function FinalCtaSection() {
           <button
             type="button"
             className="button button-primary"
-            onClick={openBooking}
+            onClick={() => setInquiryOpen(true)}
           >
-            Book a meeting
+            Start a project inquiry
             <span>↗</span>
           </button>
 
-          <span className="cta-note">1:1 on Google Meet</span>
+          <span className="cta-note">Replies within 48 hours</span>
         </div>
       </div>
+
+      <InquiryModal
+        isOpen={inquiryOpen}
+        onClose={() => setInquiryOpen(false)}
+      />
     </section>
   );
 }
