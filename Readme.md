@@ -18,7 +18,7 @@ The website is built with **Next.js 16 (App Router)**, showcasing professional p
 *   **Design System:** Full light-theme design (typography scale, cards, borders, responsive breakpoints, reduced-motion support) applied across the entire site.
 *   **Hero:** Fixed glass navigation, headline introduction and an AI / Automation system card (Observe → Reason → Act).
 *   **What I Do:** Product-lifecycle introduction — from idea to working system.
-*   **Selected Work:** Project showcase featuring AgentBroko, Plzwork, QUULIX, GrafiXr, Notepad OS and dev-apply.
+*   **Selected Work:** Project showcase featuring AgentBroko, Notepad OS, QUULIX, GrafiXr, Plzwork and dev-apply.
 *   **AI Section:** AI-native capabilities — agents, automation, local AI and AI products.
 *   **Capabilities:** Engineering, AI & Automation, and Product & Growth skill groups.
 *   **Experience:** Career timeline for roles at **Panorama Management Advisory Services** (Software Developer, Software Associate).

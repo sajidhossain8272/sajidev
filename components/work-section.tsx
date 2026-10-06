@@ -62,27 +62,27 @@ export default function WorkSection() {
           </div>
         </article>
 
-        {/* PLZWORK */}
+        {/* NOTEPAD OS */}
 
         <article className="project-card reveal">
           <div className="project-top">
-            <span className="project-category">Product · Developer Tools</span>
+            <span className="project-category">Desktop · Open Source</span>
             <span className="project-number">02</span>
           </div>
 
           <div className="project-content">
-            <h3>Plzwork</h3>
+            <h3>Notepad OS</h3>
 
             <p>
-              A collection of practical digital tools and products
-              designed to remove friction from everyday technical
-              and creative work.
+              A lightweight desktop application experiment combining
+              modern React tooling with Tauri for native desktop
+              software.
             </p>
 
             <div className="project-tech">
-              <span>Web Apps</span>
-              <span>JavaScript</span>
-              <span>Product</span>
+              <span>Tauri 2</span>
+              <span>React 19</span>
+              <span>Vite</span>
             </div>
           </div>
 
@@ -93,7 +93,7 @@ export default function WorkSection() {
               rel="noopener noreferrer"
               className="project-link"
             >
-              View on GitHub
+              Explore project
               <span>↗</span>
             </a>
           </div>
@@ -171,27 +171,27 @@ export default function WorkSection() {
           </div>
         </article>
 
-        {/* NOTEPAD OS */}
+        {/* PLZWORK */}
 
         <article className="project-card reveal">
           <div className="project-top">
-            <span className="project-category">Desktop · Open Source</span>
+            <span className="project-category">Product · Developer Tools</span>
             <span className="project-number">05</span>
           </div>
 
           <div className="project-content">
-            <h3>Notepad OS</h3>
+            <h3>Plzwork</h3>
 
             <p>
-              A lightweight desktop application experiment combining
-              modern React tooling with Tauri for native desktop
-              software.
+              A collection of practical digital tools and products
+              designed to remove friction from everyday technical
+              and creative work.
             </p>
 
             <div className="project-tech">
-              <span>Tauri 2</span>
-              <span>React 19</span>
-              <span>Vite</span>
+              <span>Web Apps</span>
+              <span>JavaScript</span>
+              <span>Product</span>
             </div>
           </div>
 
@@ -202,7 +202,7 @@ export default function WorkSection() {
               rel="noopener noreferrer"
               className="project-link"
             >
-              Explore project
+              View on GitHub
               <span>↗</span>
             </a>
           </div>
