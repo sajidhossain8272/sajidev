@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useBooking } from "./calendly-context";
 
 const MENU_LINKS = [
@@ -24,14 +25,13 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-big-head">
-          <div className="footer-brand">
-            <span className="brand-mark">S</span>
-
-            <div>
-              <strong>Sajid Hossain</strong>
-              <span>Software · AI · Products</span>
-            </div>
-          </div>
+          <Image
+            className="brand-avatar"
+            src="/Professional%20Circular%20Green%20Avatar.png"
+            alt="Sajid Hossain"
+            width={34}
+            height={34}
+          />
 
           <div className="footer-col">
             <span className="footer-col-title">Menu</span>

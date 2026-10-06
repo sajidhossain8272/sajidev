@@ -277,16 +277,12 @@ h2 span {
   letter-spacing: -.015em;
 }
 
-.brand-mark {
-  display: grid;
+.brand-avatar {
+  display: block;
   width: 34px;
   height: 34px;
-  place-items: center;
-  border-radius: 10px;
-  background: var(--black);
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .nav-links {
@@ -1108,26 +1104,7 @@ h2 span {
   align-items: start;
 }
 
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.footer-brand > div {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-brand strong {
-  font-size: 13px;
-  font-weight: 650;
-}
-
-.footer-brand > div span {
-  color: var(--muted);
-  font-size: 11px;
-}
+/* small footer brand block removed — avatar + giant name lead instead */
 
 .footer-col {
   display: flex;

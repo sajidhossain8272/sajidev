@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useBooking } from "./calendly-context";
 
@@ -67,7 +68,14 @@ export default function SiteHeader() {
     <header className={scrolled ? "site-header scrolled" : "site-header"}>
       <nav className="nav container">
         <a href="#home" className="brand" aria-label="Sajid Hossain home">
-          <span className="brand-mark">S</span>
+          <Image
+            className="brand-avatar"
+            src="/Professional%20Circular%20Green%20Avatar.png"
+            alt="Sajid Hossain"
+            width={34}
+            height={34}
+            priority
+          />
           <span className="brand-name">Sajid Hossain</span>
         </a>
 
