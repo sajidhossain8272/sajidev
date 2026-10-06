@@ -88,7 +88,7 @@ export default function WorkSection() {
 
           <div className="project-bottom">
             <a
-              href="https://github.com/sajidhossain8272"
+              href="https://github.com/sajidhossain8272/notepad-os"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
@@ -124,7 +124,7 @@ export default function WorkSection() {
 
           <div className="project-bottom">
             <a
-              href="https://github.com/sajidhossain8272"
+              href="https://quulix.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
@@ -160,7 +160,7 @@ export default function WorkSection() {
 
           <div className="project-bottom">
             <a
-              href="https://github.com/sajidhossain8272"
+              href="https://grafixr.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
@@ -197,12 +197,12 @@ export default function WorkSection() {
 
           <div className="project-bottom">
             <a
-              href="https://github.com/sajidhossain8272"
+              href="https://quickconvert.plzwork.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
             >
-              View on GitHub
+              Try it live
               <span>↗</span>
             </a>
           </div>
@@ -234,7 +234,7 @@ export default function WorkSection() {
 
           <div className="project-bottom">
             <a
-              href="https://github.com/sajidhossain8272"
+              href="https://dev-apply.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
