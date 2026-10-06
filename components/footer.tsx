@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         <p className="footer-giant">
-          something <span>useful.</span>
+          Sajid <span>Hossain.</span>
         </p>
 
         <div className="footer-bottom">

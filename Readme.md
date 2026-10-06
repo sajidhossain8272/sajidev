@@ -24,7 +24,7 @@ The website is built with **Next.js 16 (App Router)**, showcasing professional p
 *   **Experience:** Career timeline for roles at **Panorama Management Advisory Services** (Software Developer, Software Associate).
 *   **Philosophy & About:** Post-launch mindset quote plus an about preview.
 *   **Meeting Booking:** Calendly integration for scheduling a **1:1 Google Meet** from the nav, CTA card and footer (WhatsApp contact options removed).
-*   **Big Footer:** Large "something useful." typography with menu links, social links and a Book a meeting CTA.
+*   **Big Footer:** Large "Sajid Hossain." statement typography with menu links, social links and a Book a meeting CTA.
 
 ---
 
