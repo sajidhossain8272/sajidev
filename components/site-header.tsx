@@ -95,10 +95,22 @@ export default function SiteHeader() {
           ))}
         </div>
 
-        <button type="button" className="nav-cta" onClick={openBooking}>
-          Let&apos;s talk
-          <span>↗</span>
-        </button>
+        <div className="nav-actions">
+          <a
+            href="https://www.fiverr.com/s/2ppGxAQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-fiverr"
+          >
+            Fiverr
+            <span>↗</span>
+          </a>
+
+          <button type="button" className="nav-cta" onClick={openBooking}>
+            Let&apos;s talk
+            <span>↗</span>
+          </button>
+        </div>
 
         <button
           type="button"

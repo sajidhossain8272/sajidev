@@ -333,6 +333,36 @@ h2 span {
   font-size: 15px;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-fiverr {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 11px;
+  background: #1dbf73;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    transform .25s var(--ease),
+    background .25s ease;
+}
+
+.nav-fiverr:hover {
+  transform: translateY(-1px);
+  background: #19a963;
+}
+
+.nav-fiverr span {
+  font-size: 15px;
+}
+
 .mobile-menu-button {
   display: none;
   width: 40px;
@@ -1300,6 +1330,10 @@ h2 span {
 
   .nav-cta {
     display: none;
+  }
+
+  .nav-fiverr {
+    padding: 9px 13px;
   }
 
   .mobile-menu-button {

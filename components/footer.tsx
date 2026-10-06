@@ -12,6 +12,11 @@ const MENU_LINKS = [
 const SOCIAL_LINKS = [
   { href: "https://github.com/sajidhossain8272", label: "GitHub" },
   { href: "https://linkedin.com/in/brokephilanthropist", label: "LinkedIn" },
+  { href: "https://www.fiverr.com/s/2ppGxAQ", label: "Fiverr" },
+  {
+    href: "https://www.upwork.com/freelancers/~019ead7597fe72d2e9",
+    label: "Upwork",
+  },
   { href: "https://sajid-hossain-resume.vercel.app/", label: "Resume" },
   { href: "https://www.youtube.com/@agentbroko", label: "YouTube" },
 ];

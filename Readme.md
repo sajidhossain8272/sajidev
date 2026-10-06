@@ -119,6 +119,8 @@ The website is built with **Next.js 16 (App Router)**, showcasing professional p
 *   **Email:** [sajidhossain8272@gmail.com](mailto:sajidhossain8272@gmail.com)
 *   **LinkedIn:** [https://www.linkedin.com/in/brokephilanthropist](https://www.linkedin.com/in/brokephilanthropist/)  
 *   **GitHub:** [https://github.com/sajidhossain8272](https://github.com/sajidhossain8272)
+*   **Fiverr:** [https://www.fiverr.com/s/2ppGxAQ](https://www.fiverr.com/s/2ppGxAQ)
+*   **Upwork:** [https://www.upwork.com/freelancers/~019ead7597fe72d2e9](https://www.upwork.com/freelancers/~019ead7597fe72d2e9)
 
 ---
 
