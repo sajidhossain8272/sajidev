@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import './design.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Sajid Hossain – Software Developer Portfolio',
-  description: 'Portfolio website of Sajid Hossain, showcasing SaaS experience, front-end projects, and developer tools',
+  title: 'Sajid Hossain — Software Developer, AI Builder & Product Engineer',
+  description:
+    'Sajid Hossain is a software developer and product builder focused on AI agents, automation, SaaS, modern web applications and practical digital products.',
     generator: 'v0.dev'
 }
 

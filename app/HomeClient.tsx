@@ -1,80 +1,91 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import { useEffect } from "react";
 
-// Above the fold
+import SiteHeader from "@/components/site-header";
 import HeroSection from "@/components/hero-section";
-import ResumeDownload from "@/components/resume-download";
-import FloatingChat from "@/components/floating-chat";
-import WhatIOfferSection from "@/components/hire-me";
-
-// Lazy loaded
-const AboutSection = dynamic(() => import("@/components/about-section"), {
-  ssr: false,
-});
-const ProjectsSection = dynamic(() => import("@/components/projects-section"), {
-  ssr: false,
-});
-const SkillsSection = dynamic(() => import("@/components/skills-section"), {
-  ssr: false,
-});
-const SoftSkillsSection = dynamic(
-  () => import("@/components/skills-section").then((m) => m.SoftSkillsSection),
-  { ssr: false }
-);
-const ExperienceSection = dynamic(
-  () => import("@/components/experience-section"),
-  { ssr: false }
-);
-const ConsultationSection = dynamic(
-  () => import("@/components/consultation-section"),
-  { ssr: false }
-);
-const ContactSection = dynamic(() => import("@/components/contact-section"), {
-  ssr: false,
-});
+import IntroSection from "@/components/intro-section";
+import WorkSection from "@/components/work-section";
+import AiSection from "@/components/ai-section";
+import CapabilitiesSection from "@/components/capabilities-section";
+import ExperienceSection from "@/components/experience-section";
+import PhilosophySection from "@/components/philosophy-section";
+import AboutSection from "@/components/about-section";
+import FinalCtaSection from "@/components/final-cta-section";
+import Footer from "@/components/footer";
+import { CalendlyProvider } from "@/components/calendly-context";
 
 export default function HomeClient() {
+  // Scroll reveal + project card micro-interaction
+  useEffect(() => {
+    const revealElements = Array.from(
+      document.querySelectorAll<HTMLElement>(".reveal")
+    );
+
+    if (typeof IntersectionObserver === "undefined") {
+      revealElements.forEach(element => element.classList.add("visible"));
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.08,
+        rootMargin: "0px 0px -30px 0px",
+      }
+    );
+
+    revealElements.forEach(element => revealObserver.observe(element));
+
+    const cards = Array.from(
+      document.querySelectorAll<HTMLElement>(".project-card")
+    );
+
+    const onEnter = (event: Event) => {
+      (event.currentTarget as HTMLElement).style.willChange = "transform";
+    };
+
+    const onLeave = (event: Event) => {
+      (event.currentTarget as HTMLElement).style.willChange = "auto";
+    };
+
+    cards.forEach(card => {
+      card.addEventListener("mouseenter", onEnter);
+      card.addEventListener("mouseleave", onLeave);
+    });
+
+    return () => {
+      revealObserver.disconnect();
+      cards.forEach(card => {
+        card.removeEventListener("mouseenter", onEnter);
+        card.removeEventListener("mouseleave", onLeave);
+      });
+    };
+  }, []);
+
   return (
-    <main className='min-h-screen bg-black overflow-x-hidden'>
-      
-      <Navbar />
+    <CalendlyProvider>
+      <SiteHeader />
 
-      {/* Faint texture */}
-      <div className="fixed inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-5 pointer-events-none select-none"></div>
+      <main>
+        <HeroSection />
+        <IntroSection />
+        <WorkSection />
+        <AiSection />
+        <CapabilitiesSection />
+        <ExperienceSection />
+        <PhilosophySection />
+        <AboutSection />
+        <FinalCtaSection />
+      </main>
 
-      <div className='relative z-10'>
-        <section id='hero' className='scroll-mt-24'>
-          <HeroSection />
-        </section>
-        <section id='about' className='scroll-mt-24'>
-          <AboutSection />
-        </section>
-        <section id='projects' className='scroll-mt-24'>
-          <ProjectsSection />
-        </section>
-        <section id='skills' className='scroll-mt-24'>
-          <SkillsSection />
-          <SoftSkillsSection />
-        </section>
-        <section id='experience' className='scroll-mt-24'>
-          <ExperienceSection />
-        </section>
-        <section id='offer' className='scroll-mt-24'>
-          <WhatIOfferSection />
-        </section>
-        <section id='consultation' className='scroll-mt-24'>
-          <ConsultationSection />
-        </section>
-        <section id='contact' className='scroll-mt-24'>
-          <ContactSection />
-        </section>
-
-        <FloatingChat />
-        <Footer />
-      </div>
-    </main>
+      <Footer />
+    </CalendlyProvider>
   );
 }

@@ -4,17 +4,17 @@ import { Metadata } from "next";
 const baseUrl = "https://sajid-hossain-front-end-developer-p.vercel.app"; // Adjust if using a custom domain
 
 export const metadata: Metadata = {
-  title: "Sajid Hossain – Software Developer Portfolio",
+  title: "Sajid Hossain — Software Developer, AI Builder & Product Engineer",
   description:
-    "Explore the portfolio of Sajid Hossain, a skilled Software Developer specializing in React, Next.js, TypeScript, and Tailwind CSS. Discover SaaS projects, modern web tools, and UI/UX mastery.",
+    "Sajid Hossain is a software developer and product builder focused on AI agents, automation, SaaS, modern web applications and practical digital products.",
   keywords:
     "Sajid Hossain, Software Developer, Front-end Developer, React Developer, Next.js, TypeScript, Tailwind CSS, Web Developer, SaaS, Portfolio, Web Design, UI Developer, JavaScript, Developer Portfolio",
   authors: [{ name: "Sajid Hossain" }],
   metadataBase: new URL(baseUrl),
   openGraph: {
-    title: "Sajid Hossain – Software Developer Portfolio",
+    title: "Sajid Hossain — Software Developer, AI Builder & Product Engineer",
     description:
-      "Explore the work and expertise of Sajid Hossain, showcasing modern front-end projects, SaaS development, and UI/UX proficiency.",
+      "AI agents, automation, SaaS, modern web applications and practical digital products by Sajid Hossain.",
     url: baseUrl,
     siteName: "Sajid Hossain Portfolio",
     type: "website",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sajid Hossain – Software Developer Portfolio",
+    title: "Sajid Hossain — Software Developer, AI Builder & Product Engineer",
     description:
-      "Explore the work and expertise of Sajid Hossain, showcasing modern Software projects, SaaS development, and UI/UX proficiency.",
+      "AI agents, automation, SaaS, modern web applications and practical digital products by Sajid Hossain.",
     images: ["/og-image.png"],
     creator: "@yourTwitterHandle", // optional
   },

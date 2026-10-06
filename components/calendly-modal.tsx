@@ -3,18 +3,19 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { useIsMobile } from "@/hooks/use-mobile"; // optional
 
 interface CalendlyModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+/**
+ * Light-theme booking modal. Loads the Calendly widget for a 1:1
+ * Google Meet session (sajidhossain8272 / broke-innovation-mentor).
+ */
 export default function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
   const calendlyContainerRef = useRef<HTMLDivElement>(null);
   const scriptLoadedRef = useRef(false);
-  const isMobile =
-    typeof window !== "undefined" ? window.innerWidth < 640 : false; // fallback for mobile
 
   useEffect(() => {
     if (isOpen) {
@@ -50,38 +51,37 @@ export default function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className='fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-1 sm:p-4'
+          className='fixed inset-0 bg-black/50 backdrop-blur-sm z-[1100] flex items-center justify-center p-1 sm:p-4'
           onClick={onClose}
         >
           <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
+            initial={{ scale: 0.94, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
+            exit={{ scale: 0.94, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className={`backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl w-full max-w-5xl h-[calc(100vh-2rem)] relative overflow-hidden flex flex-col
-              ${isMobile ? "rounded-xl p-1" : "rounded-3xl p-0"}`}
+            className='bg-white border border-[#e7e5e4] shadow-2xl w-full max-w-5xl h-[calc(100vh-2rem)] relative overflow-hidden flex flex-col rounded-2xl sm:rounded-3xl'
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className='flex items-center justify-between p-4 sm:p-6 border-b border-white/10 shrink-0'>
+            <div className='flex items-center justify-between p-4 sm:p-6 border-b border-[#e7e5e4] shrink-0'>
               <div>
-                <h2 className='text-xl sm:text-2xl font-bold text-white mb-1'>
-                  Book a Free Consultation
+                <h2 className='mt-0 mb-1 text-xl sm:text-2xl font-semibold text-[#171717]'>
+                  Book a meeting
                 </h2>
-                <p className='text-white/70 text-sm'>
-                  Let's discuss your project and how I can help
+                <p className='text-[#737373] text-sm'>
+                  1:1 on Google Meet — pick a time that works for you
                 </p>
               </div>
-              <motion.button
+
+              <button
+                type='button'
                 onClick={onClose}
-                className='text-white/60 hover:text-white transition-colors p-2 rounded-xl hover:bg-white/10'
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                aria-label='Close'
+                className='text-[#737373] hover:text-[#171717] transition-colors p-2 rounded-xl hover:bg-[#f5f5f3]'
+                aria-label='Close booking modal'
                 autoFocus
               >
                 <X className='h-6 w-6' />
-              </motion.button>
+              </button>
             </div>
 
             {/* Calendly Widget */}
